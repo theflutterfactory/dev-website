@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+h1 {
+  font-size: 70px;
+  line-height: 1.1; /* Adjust as needed for spacing */
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 1.5;
+}
