@@ -7,7 +7,7 @@
 	}
 </script>
 
-<section class="mx-[16vw] pt-16">
+<section class="pt-16">
 	<SectionHeader sectionName="intro">Hello! I'm Julian</SectionHeader>
 	<div class="mb-8"></div>
 	<h1>I'm a Senior Software Engineer with experience in several</h1>
