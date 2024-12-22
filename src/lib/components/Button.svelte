@@ -1,5 +1,11 @@
 <script lang="ts">
-	import type { Button } from '$types/button';
+	import type { Snippet } from 'svelte';
+
+	type Button = {
+		children: Snippet;
+		onclick: (e: MouseEvent) => void | (() => void);
+		className?: string;
+	};
 
 	let { children, className, ...props }: Button = $props();
 </script>
