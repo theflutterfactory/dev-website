@@ -23,3 +23,7 @@ h3:before {
     height:5px;                          
     background:#000;
 }
+
+p {
+  margin-bottom: 16px;
+}
