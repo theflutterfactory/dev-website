@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { HeroSection } from '$components';
-	import AboutMeSection from '$components/AboutMeSection.svelte';
+	import { AboutMe, HeroSection } from '$components';
 </script>
 
 <HeroSection />
-<AboutMeSection />
+<AboutMe />
