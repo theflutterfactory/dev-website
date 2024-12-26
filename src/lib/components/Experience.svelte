@@ -1,48 +1,16 @@
 <script lang="ts">
-	type Experience = {
-		jobTitle: string;
-		company: string;
-		startDate: string;
-		endDate: string;
+	import type { DevExperience } from '$lib/types/sanity';
+
+	type ExperienceProps = {
+		workExperience: DevExperience[];
 	};
 
-	const experience: Experience[] = [
-		{
-			jobTitle: 'Senior Software Engineer - Flutter',
-			company: 'Very Good Ventures',
-			startDate: 'Aug 2022',
-			endDate: ''
-		},
-		{
-			jobTitle: 'Lead Software Engineer - Flutter',
-			company: 'Willow Innovations',
-			startDate: 'Aug 2021',
-			endDate: 'Aug 2022'
-		},
-		{
-			jobTitle: 'Senior Mobile Engineer (Contract) - Flutter',
-			company: 'Codeifai (previously YPB Group)',
-			startDate: 'Jan 2021',
-			endDate: 'July 2021'
-		},
-		{
-			jobTitle: 'Youtube Content Creator - Flutter Tutorials',
-			company: 'The Flutter Factory',
-			startDate: 'Jan 2018',
-			endDate: 'Jan 2021'
-		},
-		{
-			jobTitle: 'Senior Android Engineer',
-			company: 'Capital One',
-			startDate: 'Feb 2014',
-			endDate: 'Sep 2017'
-		}
-	];
+	let { workExperience }: ExperienceProps = $props();
 </script>
 
 <section class="mt-8 flex justify-between">
 	<ul class="w-1/2">
-		{#each experience as item}
+		{#each workExperience as item}
 			<li class="[&:not(:first-of-type)]:color border-b border-solid pt-4">
 				<article>
 					<h2 class="mb-2">{item.jobTitle}</h2>
@@ -61,6 +29,5 @@
 			</li>
 		{/each}
 	</ul>
-	<h2>Experience</h2>
-	<ul></ul>
+	<h1 class="self-center text-center">Work Experience</h1>
 </section>

@@ -1,8 +1,14 @@
-<script>
+<script lang="ts">
 	import { Button, SectionHeader } from '$components';
 	import image from '$assets/me.jpg';
-	import { goto } from '$app/navigation';
 	import Experience from './Experience.svelte';
+	import type { DevExperience } from '$lib/types/sanity';
+
+	type AboutMeProps = {
+		workExperience: DevExperience[];
+	};
+
+	let { workExperience }: AboutMeProps = $props();
 
 	function onclick() {
 		console.log('projects clicked');
@@ -29,5 +35,5 @@
 			<Button {onclick} className="mt-8">View Projects</Button>
 		</div>
 	</div>
-	<Experience />
+	<Experience {workExperience} />
 </section>
