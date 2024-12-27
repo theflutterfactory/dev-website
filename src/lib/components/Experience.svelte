@@ -1,6 +1,4 @@
 <script lang="ts">
-	import type { DevExperience } from '$lib/types/sanity';
-
 	type ExperienceProps = {
 		workExperience: DevExperience[];
 	};

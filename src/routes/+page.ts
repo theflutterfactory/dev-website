@@ -1,4 +1,3 @@
-import type { DevExperience } from "$lib/types/sanity";
 import type { PageLoad } from "./$types";
 import client from '$lib/utils/sanity';
 

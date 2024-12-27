@@ -2,7 +2,6 @@
 	import { Button, SectionHeader } from '$components';
 	import image from '$assets/me.jpg';
 	import Experience from './Experience.svelte';
-	import type { DevExperience } from '$lib/types/sanity';
 
 	type AboutMeProps = {
 		workExperience: DevExperience[];
