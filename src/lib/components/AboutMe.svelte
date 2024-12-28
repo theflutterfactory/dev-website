@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { Button, SectionHeader } from '$components';
+	import { Button, Experience, SectionHeader } from '$components';
 	import image from '$assets/me.jpg';
-	import Experience from './Experience.svelte';
 
 	type AboutMeProps = {
 		workExperience: DevExperience[];
