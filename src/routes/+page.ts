@@ -10,10 +10,15 @@ export const load: PageLoad = async () => {
     '*[_type =="project"] | order(dateAccomplished desc)'
   );
 
+  const skills: Skill[] = await client.fetch(
+    '*[_type =="skills"][0].skillsList'
+  );
+
   const projects = projectData.map(formatProject);
 
   return {
     workExperience,
-    projects
+    projects,
+    skills
   };
 };  
