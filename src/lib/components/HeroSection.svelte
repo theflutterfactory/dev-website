@@ -3,7 +3,7 @@
 	import { Button, SectionHeader } from '$components';
 
 	function onclick() {
-		goto('/#contact');
+		goto('/#contact-form');
 	}
 </script>
 

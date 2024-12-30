@@ -32,3 +32,41 @@ h3:before {
 p {
   margin-bottom: 16px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+  outline: none;
+}
+
+form * {
+  font-size: 18px;
+  width: 60%;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: black
+}
+
+input {
+  border-radius: 8px;
+  border: none;
+  background-color: #f3f1f1e4;
+}
+
+textarea {
+  height: 120px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f3f1f1e4;
+}
+
+.input-error{
+  background-color: rgb(192, 58, 58);
+}
+
+.input-error::placeholder{
+  color: white;
+}

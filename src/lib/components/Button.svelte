@@ -11,7 +11,7 @@
 </script>
 
 <button
-	class={`font-inter rounded-lg bg-black px-10 py-4 text-2xl font-medium text-white ${className}`}
+	class={`rounded-lg bg-black px-10 py-4 font-inter text-2xl font-medium text-white ${className}`}
 	{...props}
 >
 	{@render children()}
