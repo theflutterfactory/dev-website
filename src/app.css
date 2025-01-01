@@ -15,8 +15,8 @@ h2{
 
 h3{
   font-size: 40px;
-    position:relative; 
-    border-bottom:2px solid #8a8a8a; 
+    position:relative;
+    border-bottom:2px solid #8a8a8a;
     display: inline-block;
 }
 
@@ -64,7 +64,7 @@ textarea {
 }
 
 .input-error{
-  background-color: rgb(192, 58, 58);
+  background-color: rgb(219, 89, 89);
 }
 
 .input-error::placeholder{

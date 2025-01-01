@@ -8,7 +8,6 @@
 
 	let { projects }: ProjectsProps = $props();
 	const latestProject = projects[0];
-	console.log(projects);
 </script>
 
 <section class="pt-6">
