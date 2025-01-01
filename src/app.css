@@ -37,13 +37,12 @@ form {
   display: flex;
   flex-direction: column;
   align-items: end;
-  width: 100%;
   outline: none;
 }
 
 form * {
   font-size: 18px;
-  width: 60%;
+  width: 100%;
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   margin-bottom: 16px;

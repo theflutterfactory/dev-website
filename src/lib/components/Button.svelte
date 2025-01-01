@@ -3,7 +3,7 @@
 
 	type Button = {
 		children: Snippet;
-		onclick: (e: MouseEvent) => void | (() => void);
+		onclick: ((e: MouseEvent) => void) | (() => void);
 		type?: 'button' | 'submit' | 'reset' | null | undefined;
 		className?: string;
 	};
