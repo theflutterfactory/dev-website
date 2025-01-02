@@ -8,3 +8,4 @@ export { default as ProjectImage } from './projects/ProjectImage.svelte';
 export { default as ProjectInfo } from './projects/ProjectInfo.svelte';
 export { default as Skills } from './Skills.svelte';
 export { default as Contact } from './Contact.svelte';
+export { default as Header } from './Header.svelte';
