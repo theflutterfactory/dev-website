@@ -14,9 +14,8 @@
 
 <main class="mt-8">
 	<h4>{company}</h4>
-	<div class="" />
 	<h2 class="mb-4">{name}</h2>
-	<img class="max-h-[450px] w-full rounded-xl object-cover" src={imageUrl} alt="" />
+	<img class="max-h-[450px] w-full rounded-xl object-cover" src={imageUrl} alt="main-project" />
 	<div class="mt-8 flex">
 		<div class="min-w-60">
 			<h2>Date</h2>
@@ -28,14 +27,14 @@
 				{/each}
 			</ul>
 		</div>
-		<div class="">
-			{#each content as block, index}
+		<div>
+			{#each content as block}
 				{#if block.type === 'text'}
 					<svelte:element this={getTagFromStyle(block.style)}>
 						{block.textToRender}
 					</svelte:element>
 				{:else}
-					<img class="size-20" src={block.url} alt="" />
+					<img class="size-20" src={block.url} alt="project" />
 				{/if}
 			{/each}
 		</div>

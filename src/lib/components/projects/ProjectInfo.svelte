@@ -8,8 +8,8 @@
 
 <div class="my-4 flex items-center justify-between">
 	<div>
-		<h2 class="">{project.name}</h2>
-		<p class="">{project.company}</p>
+		<h2>{project.name}</h2>
+		<p>{project.company}</p>
 	</div>
 	<a
 		href={`/projects/${project.slug}`}

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
 	import logo from '$assets/ff.png';
 </script>
 
