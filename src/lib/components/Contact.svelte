@@ -1,17 +1,51 @@
 <script lang="ts">
 	import { Button, SectionHeader } from '$components';
 
+	let contactName = $state('');
+	let email = $state('');
+	let message = $state('');
+	let isFormInvalid = $state(false);
+	let isEmailSent = $state(false);
+	let showErrorMsg = $state(false);
+	let isLoading = $state(false);
+
 	let { spinner } = $props();
 
-	function onSubmit(event: Event) {
+	$inspect(contactName, email, message);
+
+	async function onSubmit(event: Event) {
 		event.preventDefault();
+
+		if (email && contactName && message) {
+			isLoading = true;
+			const response = await fetch('/api/send-mail', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					contactName,
+					email,
+					message
+				})
+			});
+			isLoading = false;
+
+			if (response.ok) {
+				isEmailSent = true;
+			} else {
+				showErrorMsg = true;
+			}
+		} else {
+			isFormInvalid = true;
+		}
 	}
 </script>
 
 <section class="mt-4">
 	<SectionHeader sectionName="contact-form">Contact Me</SectionHeader>
 	<div class="mt-8 flex justify-between">
-		<div class="w-2/3">
+		<div class="w-1/2">
 			<h2>Tell me about your project</h2>
 			<p>
 				Whether it's building a small project from scratch or working on an existing codebase with a
@@ -19,11 +53,45 @@
 				create something special.
 			</p>
 		</div>
-		<form>
-			<input placeholder="Name" />
-			<input placeholder="Email" />
-			<textarea placeholder="Message"></textarea>
-			<Button onclick={onSubmit}>{@render spinner()}</Button>
-		</form>
+		{#if isEmailSent}
+			<div class="w-2/5">
+				<h2>Thanks for reaching out to contact me. I should be able to reply within 48 hours</h2>
+			</div>
+		{:else if isLoading}
+			<div class="flex w-2/5">
+				{@render spinner()}
+				<h2>Submitting contact form...</h2>
+			</div>
+		{:else if showErrorMsg}
+			<div class="w-2/5">
+				<h2>
+					There seems to a server issue at the moment. Please me directly at <a
+						class="size-4 text-blue-700 underline"
+						href="mailto:julian.currie@gmail.com">julian.currie@gmail.com</a
+					>
+				</h2>
+			</div>
+		{:else}
+			<div class="w-2/5">
+				<form>
+					<input
+						class:input-error={isFormInvalid && !Boolean(contactName.length)}
+						placeholder="Name"
+						bind:value={contactName}
+					/>
+					<input
+						class:input-error={isFormInvalid && !Boolean(email.length)}
+						placeholder="Email"
+						bind:value={email}
+					/>
+					<textarea
+						class:input-error={isFormInvalid && !Boolean(message.length)}
+						placeholder="Message"
+						bind:value={message}
+					></textarea>
+					<Button onclick={onSubmit}>Submit</Button>
+				</form>
+			</div>
+		{/if}
 	</div>
 </section>
