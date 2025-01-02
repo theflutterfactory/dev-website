@@ -1,10 +1,9 @@
-import { PUBLIC_SANITY_PROJECT_ID } from '$env/static/public';
 import { createClient, type ClientConfig } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 const config: ClientConfig = {
-  projectId: PUBLIC_SANITY_PROJECT_ID,
+  projectId: 'at41w4a9',
   dataset: 'production',
   useCdn: true,
   apiVersion: '2024-12-26'
