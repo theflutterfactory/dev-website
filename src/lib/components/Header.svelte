@@ -1,11 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { Button } from '$components';
 	import logo from '$assets/ff.png';
-
-	function goToContactForm() {
-		goto('#contact-form');
-	}
 </script>
 
 <nav class="flex items-center justify-between bg-black px-16 py-4">
