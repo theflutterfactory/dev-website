@@ -1,17 +1,18 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { Button } from '$components';
+	import logo from '$assets/ff.png';
 
 	function goToContactForm() {
 		goto('#contact-form');
 	}
 </script>
 
-<nav class="flex items-center justify-between p-5">
-	<a href="/" class="text-4xl font-bold">NF</a>
+<nav class="flex items-center justify-between bg-black px-16 py-4">
+	<img class="size-14 object-cover" src={logo} alt="flutter factory" />
 	<div class="flex items-center gap-14">
-		<a href="/#about-me" class="hover:underline">About Me</a>
-		<a href="/#my-projects" class="hover:underline">Work</a>
-		<Button onclick={goToContactForm} className="nav-bar">Contact</Button>
+		<a href="/#about-me" class="text-white hover:underline">About Me</a>
+		<a href="/#my-projects" class="text-white hover:underline">Work</a>
+		<a href="/#contact-form" class="text-white hover:underline">Contact</a>
 	</div>
 </nav>

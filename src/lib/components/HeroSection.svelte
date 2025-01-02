@@ -12,5 +12,5 @@
 	<div class="mb-8"></div>
 	<h1>Senior Software Engineer with experience in several</h1>
 	<h1 class="mb-4 text-[#656464]">Mobile and Web frameworks.</h1>
-	<Button {onclick}>Contact me</Button>
+	<Button {onclick}>Let's Talk</Button>
 </section>

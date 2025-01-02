@@ -5,8 +5,8 @@
 </script>
 
 <div>
+	<Header />
 	<div class="mx-[16vw]">
-		<Header />
 		{@render children()}
 	</div>
 	<Footer />
