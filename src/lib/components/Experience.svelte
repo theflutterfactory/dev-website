@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { formatDate } from '$lib/utils/format';
+
 	type ExperienceProps = {
 		workExperience: DevExperience[];
 	};
@@ -15,9 +17,9 @@
 					<div class="flex justify-between">
 						<a class="mb-0 text-blue-700 hover:underline" href={item.link}>{item.company}</a>
 						<p>
-							{item.startDate}
+							{formatDate(item.startDate)}
 							{#if item.endDate}
-								- {item.endDate}
+								- {formatDate(item.endDate)}
 							{:else}
 								- present
 							{/if}

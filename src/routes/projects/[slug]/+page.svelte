@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { formatDate } from '$lib/utils/format';
+
 	let { data } = $props();
 
 	const { name, company, dateCompleted, stack, imageUrl, content } = data.project;
@@ -19,7 +21,7 @@
 	<div class="mt-8 flex">
 		<div class="min-w-60">
 			<h2>Date</h2>
-			<p>{dateCompleted}</p>
+			<p>{formatDate(dateCompleted)}</p>
 			<h2>Tech Stack</h2>
 			<ul>
 				{#each stack as skill}
