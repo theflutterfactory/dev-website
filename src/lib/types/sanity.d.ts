@@ -8,6 +8,7 @@ type DevExperience = {
   company?: string;
   startDate?: string;
   endDate?: string;
+  link?: string;
 };
 
 type Project = {

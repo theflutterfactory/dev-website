@@ -13,7 +13,7 @@
 				<article>
 					<h2 class="mb-2">{item.jobTitle}</h2>
 					<div class="flex justify-between">
-						<p class="mb-0">{item.company}</p>
+						<a class="mb-0 text-blue-700 hover:underline" href={item.link}>{item.company}</a>
 						<p>
 							{item.startDate}
 							{#if item.endDate}
