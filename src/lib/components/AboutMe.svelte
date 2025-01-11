@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button, Experience, SectionHeader } from '$components';
 	import image from '$assets/me.jpg';
+	import { goto } from '$app/navigation';
 
 	type AboutMeProps = {
 		workExperience: DevExperience[];
@@ -9,7 +10,7 @@
 	let { workExperience }: AboutMeProps = $props();
 
 	function onclick() {
-		console.log('projects clicked');
+		goto('/#my-projects');
 	}
 </script>
 

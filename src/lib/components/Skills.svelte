@@ -10,7 +10,7 @@
 
 <section class="mt-4">
 	<SectionHeader sectionName="skills">Skills</SectionHeader>
-	<div class="mx-auto my-10 grid grid-cols-5 place-items-center gap-x-8 gap-y-8">
+	<div class="mx-auto my-10 grid w-1/2 grid-cols-5 place-items-center gap-x-2 gap-y-4">
 		{#each skills as skill}
 			<div class="tooltip-container">
 				<i class={`${skill.iconClass} flex text-6xl`}></i>
