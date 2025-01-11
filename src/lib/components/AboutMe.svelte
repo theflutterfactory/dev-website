@@ -16,7 +16,7 @@
 
 <section class="mt-16">
 	<SectionHeader sectionName="about-me">About Me</SectionHeader>
-	<div class="mt-6 flex flex-col items-stretch md:flex-row md:space-x-16">
+	<div class="mt-6 flex flex-col md:flex-row md:space-x-16">
 		<img class="object-cover pb-4 md:w-1/3" src={image} alt="author" />
 		<div class="text-left">
 			<p>

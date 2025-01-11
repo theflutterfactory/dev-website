@@ -4,7 +4,6 @@ export function formatDate(dateString: string | undefined) {
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
-      day: 'numeric'
     });
   }
 };

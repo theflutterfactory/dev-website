@@ -72,7 +72,7 @@
 				</h2>
 			</div>
 		{:else}
-			<div class="w-full md:w-2/5">
+			<div class="md:w-2/5">
 				<form>
 					<input
 						class:input-error={isFormInvalid && !Boolean(contactName.length)}

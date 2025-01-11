@@ -18,16 +18,20 @@
 	<h4>{company}</h4>
 	<h2 class="mb-4">{name}</h2>
 	<img class="max-h-[450px] w-full rounded-xl object-cover" src={imageUrl} alt="main-project" />
-	<div class="mt-8 flex">
-		<div class="min-w-60">
-			<h2>Date</h2>
-			<p>{formatDate(dateCompleted)}</p>
-			<h2>Tech Stack</h2>
-			<ul>
-				{#each stack as skill}
-					<li>{skill}</li>
-				{/each}
-			</ul>
+	<div class="mt-8 flex flex-col md:flex-row">
+		<div class="flex min-w-60 flex-row justify-around md:flex-col md:justify-normal">
+			<div class="flex flex-col">
+				<h2>Date</h2>
+				<p>{formatDate(dateCompleted)}</p>
+			</div>
+			<div class="flex flex-col">
+				<h2>Tech Stack</h2>
+				<ul>
+					{#each stack as skill}
+						<li>{skill}</li>
+					{/each}
+				</ul>
+			</div>
 		</div>
 		<div>
 			{#each content as block}
