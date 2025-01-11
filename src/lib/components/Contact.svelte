@@ -44,8 +44,8 @@
 
 <section class="mt-4">
 	<SectionHeader sectionName="contact-form">Contact Me</SectionHeader>
-	<div class="mt-8 flex justify-between">
-		<div class="w-1/2">
+	<div class="mt-8 flex flex-col justify-between md:flex-row">
+		<div class="md:w-1/2">
 			<h2>Tell me about your project</h2>
 			<p>
 				Whether it's building a small project from scratch or working on an existing codebase with a
@@ -54,7 +54,7 @@
 			</p>
 		</div>
 		{#if isEmailSent}
-			<div class="w-2/5">
+			<div class="md:w-2/5">
 				<h2>Thanks for reaching out to contact me. I should be able to reply within 48 hours</h2>
 			</div>
 		{:else if isLoading}
@@ -72,7 +72,7 @@
 				</h2>
 			</div>
 		{:else}
-			<div class="w-2/5">
+			<div class="w-full md:w-2/5">
 				<form>
 					<input
 						class:input-error={isFormInvalid && !Boolean(contactName.length)}

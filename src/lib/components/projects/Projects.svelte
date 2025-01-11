@@ -16,9 +16,9 @@
 		<ProjectImage project={latestProject} extraClasses="h-[450px]" />
 		<ProjectInfo project={latestProject} />
 	</article>
-	<div class="flex flex-wrap justify-between">
+	<div class="justify-between md:flex">
 		{#each projects.slice(1) as project}
-			<article class="w-[49%]">
+			<article class="md:w-[49%]">
 				<ProjectImage {project} extraClasses="h-80" />
 				<ProjectInfo {project} />
 			</article>

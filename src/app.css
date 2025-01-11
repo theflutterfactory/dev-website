@@ -2,11 +2,24 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
 h1 {
-  font-size: 70px;
+  font-size: 2rem;
   line-height: 1.1;
   /* Adjust as needed for spacing */
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 
 h2 {
