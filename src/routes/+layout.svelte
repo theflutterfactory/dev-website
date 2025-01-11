@@ -9,7 +9,7 @@
 
 <div>
 	<Header />
-	<div class="mx-[16vw]">
+	<div class=" mx-4 md:mx-[16vw]">
 		{@render children()}
 	</div>
 	<Footer />
