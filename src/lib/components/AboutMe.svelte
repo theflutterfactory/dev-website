@@ -17,7 +17,7 @@
 <section class="mt-16">
 	<SectionHeader sectionName="about-me">About Me</SectionHeader>
 	<div class="mt-6 flex flex-col md:flex-row md:space-x-16">
-		<img class="object-cover pb-4 md:w-1/3" src={image} alt="author" />
+		<img class="object-cover shadow-md md:w-1/3" src={image} alt="author" />
 		<div class="text-left">
 			<p>
 				Tech and Travel have always been my two main passions in life since I was in high school.

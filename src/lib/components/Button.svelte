@@ -13,7 +13,7 @@
 
 <button
 	type={type ?? 'button'}
-	class={`rounded-lg bg-black px-10 py-3 font-inter font-medium text-white hover:bg-gray-800 md:text-2xl ${className}`}
+	class={`rounded-lg bg-black px-10 py-3 font-inter font-medium text-white drop-shadow-2xl hover:bg-gray-800 md:text-2xl ${className}`}
 	{...props}
 >
 	{@render children()}

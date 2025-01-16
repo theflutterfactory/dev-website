@@ -9,7 +9,7 @@
 
 <a href={`/projects/${project.slug}`}>
 	<img
-		class={`w-full cursor-pointer rounded-[20px] bg-slate-100 object-cover ${extraClasses}`}
+		class={`w-full cursor-pointer rounded-[20px] bg-slate-100 object-cover shadow-lg ${extraClasses}`}
 		src={project.imageUrl}
 		alt={project.name}
 	/>
