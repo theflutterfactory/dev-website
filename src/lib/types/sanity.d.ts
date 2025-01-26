@@ -36,6 +36,15 @@ type Project = {
   stack: Array<string>;
 };
 
+type AboutMe = {
+  _id: string;
+  _type: 'aboutMe';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  aboutMe?: string;
+};
+
 type TextContent = {
   children: Array<{
     marks?: Array<string>;

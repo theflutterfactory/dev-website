@@ -2,6 +2,11 @@ import type { PageLoad } from "./$types";
 import client, { formatProject } from '$lib/utils/sanity';
 
 export const load: PageLoad = async () => {
+
+  const aboutMe: AboutMe[] = await client.fetch(
+    '*[_type =="aboutMe"]'
+  );
+
   const workExperience: DevExperience[] = await client.fetch(
     '*[_type =="devExperience"] | order(startDate desc)'
   );
@@ -17,6 +22,7 @@ export const load: PageLoad = async () => {
   const projects = projectData.map(formatProject);
 
   return {
+    aboutMe,
     workExperience,
     projects,
     skills

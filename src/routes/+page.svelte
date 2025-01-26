@@ -2,7 +2,7 @@
 	import { AboutMe, Contact, HeroSection, Projects, Skills } from '$components';
 
 	const { data } = $props();
-	let { workExperience, projects, skills } = data;
+	let { workExperience, projects, skills, aboutMe } = data;
 </script>
 
 {#snippet spinner()}
@@ -25,7 +25,7 @@
 {/snippet}
 
 <HeroSection />
-<AboutMe {workExperience} />
+<AboutMe {workExperience} {aboutMe} />
 <Projects {projects} />
 <Skills {skills} />
 <Contact {spinner} />
