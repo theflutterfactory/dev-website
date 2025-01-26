@@ -4,7 +4,7 @@ import client, { formatProject } from '$lib/utils/sanity';
 export const load: PageLoad = async () => {
 
   const aboutMe: AboutMe[] = await client.fetch(
-    '*[_type =="aboutMe"]'
+    '*[_type =="aboutMe"][0].aboutMe'
   );
 
   const workExperience: DevExperience[] = await client.fetch(
