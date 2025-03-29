@@ -9,6 +9,6 @@
 	let { children, sectionName }: SectionHeader = $props();
 </script>
 
-<div id={sectionName}>
-	<h3><span>{@render children()}</span></h3>
+<div id={sectionName} class="header-container">
+	<h3>{@render children()}</h3>
 </div>
