@@ -22,18 +22,18 @@
 		<div class="flex min-w-60 flex-row justify-around md:flex-col md:justify-normal">
 			<div class="flex flex-col">
 				<h2>Date</h2>
-				<p>{formatDate(dateCompleted)}</p>
+				<p class="text-white">{formatDate(dateCompleted)}</p>
 			</div>
 			<div class="flex flex-col">
 				<h2>Tech Stack</h2>
 				<ul>
 					{#each stack as skill}
-						<li>{skill}</li>
+						<li class="text-white">{skill}</li>
 					{/each}
 				</ul>
 			</div>
 		</div>
-		<div>
+		<div class="text-white/90">
 			{#each content as block}
 				{#if block.type === 'text'}
 					<svelte:element this={getTagFromStyle(block.style)}>

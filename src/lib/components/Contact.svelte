@@ -46,8 +46,8 @@
 	<SectionHeader sectionName="contact-form">Contact Me</SectionHeader>
 	<div class="mt-8 flex flex-col justify-between md:flex-row">
 		<div class="md:w-1/2">
-			<h2>Tell me about your project</h2>
-			<p>
+			<h2 class="mb-4 text-white">Tell me about your project</h2>
+			<p class="text-lg text-white/90">
 				Whether it's building a small project from scratch or working on an existing codebase with a
 				large team, I'm always excited to dig into some code. Feel free to reach out to me and let's
 				create something special.
