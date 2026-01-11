@@ -24,7 +24,7 @@
 
 <div
 	class={cn(
-		'group flex overflow-hidden [--duration:40s] [--gap:1rem] [gap:var(--gap)]',
+		'group flex overflow-x-hidden [--duration:40s] [--gap:1rem] [gap:var(--gap)]',
 		className
 	)}
 	style="--duration: {speed}s;"
