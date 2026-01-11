@@ -1,5 +1,10 @@
 <script lang="ts">
-	import { AboutMe, Contact, HeroSection, Projects, Skills } from '$components';
+	import { HeroSection } from '$components';
+	import AboutSection from '$lib/components/sections/AboutSection.svelte';
+	import ExperienceSection from '$lib/components/sections/ExperienceSection.svelte';
+	import ProjectsSection from '$lib/components/sections/ProjectsSection.svelte';
+	import SkillsSection from '$lib/components/sections/SkillsSection.svelte';
+	import ContactSection from '$lib/components/sections/ContactSection.svelte';
 
 	const { data } = $props();
 	let { workExperience, projects, skills, aboutMe } = data;
@@ -25,7 +30,8 @@
 {/snippet}
 
 <HeroSection />
-<AboutMe {workExperience} {aboutMe} />
-<Projects {projects} />
-<Skills {skills} />
-<Contact {spinner} />
+<AboutSection {aboutMe} />
+<ExperienceSection {workExperience} />
+<ProjectsSection {projects} />
+<SkillsSection {skills} />
+<ContactSection {spinner} />
