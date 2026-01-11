@@ -7,10 +7,10 @@
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 </script>
 
-<div class=" min-h-screen bg-gray-950">
+<div class="min-h-screen bg-gray-950">
 	<Header />
-	<div class=" mx-4 md:mx-[16vw]">
+	<main class="mx-4 md:mx-[16vw]">
 		{@render children()}
-	</div>
+	</main>
 	<Footer />
 </div>

@@ -1,3 +1,87 @@
 @import "tailwindcss";
 
 @import "tw-animate-css";
+
+:root {
+  --border: 214.3 31.8% 91.4%;
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #22d3ee 100%);
+  --gradient-secondary: linear-gradient(135deg, #22d3ee 0%, #a855f7 100%);
+
+  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+  --shadow-glow-hover: 0 0 30px rgba(59, 130, 246, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22d3ee;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow {
+  box-shadow: var(--shadow-glow);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow:hover {
+  box-shadow: var(--shadow-glow-hover);
+}
+
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: white;
+}
