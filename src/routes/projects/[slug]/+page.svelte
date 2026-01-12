@@ -10,9 +10,9 @@
 
 	const { name, company, dateCompleted, stack, imageUrl, content } = data.project;
 
-	const imageBlocks = content.filter((block) => block.type === 'image');
+	const imageBlocks = content.filter((block): block is FormattedImageContent => block.type === 'image');
 	const textBlocks = content.filter(
-		(block) => block.type === 'text' && block.textToRender.trim().length > 0
+		(block): block is FormattedTextContent => block.type === 'text' && block.textToRender.trim().length > 0
 	);
 
 	const groupedContent: Array<{ heading?: FormattedTextContent; content: FormattedTextContent[] }> =

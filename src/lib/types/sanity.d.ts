@@ -77,16 +77,6 @@ type ImageContent = {
   _key: string;
 };
 
-type FormattedProject = {
-  name: string;
-  company: string;
-  dateCompleted: string;
-  stack: string[];
-  imageUrl: string;
-  slug: string;
-  content: Array<>;
-};
-
 type FormattedTextContent = {
   type: 'text';
   style: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote';
@@ -94,8 +84,18 @@ type FormattedTextContent = {
 };
 
 type FormattedImageContent = {
-  type: 'image',
+  type: 'image';
   url: string;
+};
+
+type FormattedProject = {
+  name: string;
+  company: string;
+  dateCompleted: string;
+  stack: string[];
+  imageUrl: string;
+  slug: string;
+  content: Array<FormattedTextContent | FormattedImageContent>;
 };
 
 type Skill = {

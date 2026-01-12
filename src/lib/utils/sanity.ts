@@ -31,7 +31,7 @@ export function formatProject(project: Project) {
   return formattedProject;
 }
 
-export function formatProjectContent(content: TextContent | ImageContent) {
+export function formatProjectContent(content: TextContent | ImageContent): FormattedTextContent | FormattedImageContent {
   //NOTE: Either 'block' or 'image'
   if (content._type === 'block') {
     const formattedTextContent: FormattedTextContent = {
@@ -41,9 +41,10 @@ export function formatProjectContent(content: TextContent | ImageContent) {
     };
     return formattedTextContent;
   } else {
-    return {
+    const formattedImageContent: FormattedImageContent = {
       type: 'image',
       url: buildImageUrl(content)
     };
+    return formattedImageContent;
   }
 }
