@@ -17,6 +17,13 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  background-color: #030712; /* gray-950 */
+  overscroll-behavior: none;
+}
+
+body {
+  background-color: #030712; /* gray-950 */
+  overscroll-behavior-y: none;
 }
 
 ::-webkit-scrollbar {

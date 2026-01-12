@@ -16,10 +16,10 @@
 	let {
 		children,
 		class: className,
-		shimmerColor = '#ffffff',
+		shimmerColor = 'rgba(255, 255, 255, 0.3)',
 		background = 'rgba(59, 130, 246, 1)',
 		shimmerSize = '0.05em',
-		shimmerDuration = '3s',
+		shimmerDuration = '5s',
 		borderRadius = '100px',
 		onclick,
 		...props
@@ -52,7 +52,7 @@
 		"
 	>
 		<div
-			class="animate-shimmer absolute -inset-[100%] bg-[linear-gradient(var(--spread),transparent_0,var(--shimmer)_50%,transparent_100%)] bg-[length:var(--_bg-size)_100%] bg-[position:calc((100%-var(--shimmer-width))*0.5)_0] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+			class="animate-shimmer absolute -inset-[100%] bg-[linear-gradient(var(--spread),transparent_0,var(--shimmer)_50%,transparent_100%)] bg-[length:var(--_bg-size)_100%] bg-[position:calc((100%-var(--shimmer-width))*0.5)_0] opacity-0 transition-opacity duration-500 group-hover:opacity-60"
 		></div>
 	</div>
 
@@ -61,7 +61,7 @@
 	</div>
 
 	<div
-		class="absolute inset-0 -z-10 rounded-[var(--radius)] opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100"
+		class="absolute inset-0 -z-10 rounded-[var(--radius)] opacity-0 blur-xl transition-opacity duration-700 group-hover:opacity-50"
 		style="background: {background};"
 	></div>
 </button>

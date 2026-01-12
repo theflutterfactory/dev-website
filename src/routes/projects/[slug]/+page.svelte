@@ -162,7 +162,7 @@
 
 				<button
 					onclick={scrollToTop}
-					class="flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 font-medium text-gray-300 backdrop-blur-lg transition-all duration-300 hover:border-blue-400/50 hover:bg-blue-500/10 hover:text-blue-400"
+					class="flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 font-medium text-gray-300 backdrop-blur-lg transition-all duration-300 hover:border-blue-400/50 hover:bg-blue-500/10 hover:text-blue-400"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

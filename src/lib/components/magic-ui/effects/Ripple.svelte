@@ -20,7 +20,7 @@
 <div class={cn('absolute inset-0 flex items-center justify-center', className)} {...props}>
 	{#each Array.from({ length: numCircles }, (_, i) => i) as i}
 		<div
-			class="absolute animate-ripple rounded-full bg-blue-500/25"
+			class="animate-ripple absolute rounded-full bg-blue-500/25"
 			style="
 				width: {mainCircleSize + i * 70}px;
 				height: {mainCircleSize + i * 70}px;
@@ -44,6 +44,6 @@
 	}
 
 	.animate-ripple {
-		animation: ripple 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+		animation: ripple 3s cubic-bezier(1, 1, 1, 1) 2;
 	}
 </style>
